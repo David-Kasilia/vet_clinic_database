@@ -26,6 +26,7 @@ SELECT COUNT(*) FROM animals WHERE escape_attempts > 0;
 
 -- Average Weight of animals
 SELECT SUM(weight_kg) / COUNT(*) as average FROM animals;
+SELECT AVG(weight_kg) FROM animals;
 
 -- Most escape_attempts
 SELECT MAX(escape_attempts) FROM animals;
