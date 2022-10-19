@@ -19,5 +19,9 @@ CREATE TABLE owners (
     PRIMARY KEY(owner_id)
 );
 
-
-
+-- Species Table
+CREATE TABLE species (
+    species_id INT GENERATED ALWAYS AS IDENTITY,
+    species_name VARCHAR(250) NOT NULL,
+    PRIMARY KEY(species_id)
+);
