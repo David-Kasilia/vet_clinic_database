@@ -59,6 +59,7 @@ CREATE TABLE visits (
     id INT GENERATED ALWAYS AS IDENTITY,
     animal_id INT NOT NULL,
     vet_id INT NOT NULL,
+    date_of_visit DATE NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY (animal_id) REFERENCES animals (id),
     FOREIGN KEY (vet_id) REFERENCES vets (id)
