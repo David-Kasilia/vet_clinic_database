@@ -39,6 +39,12 @@ UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Melody P
 -- Update owner_id: Dean Winchester owns Angemon and Boarmon
 UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Dean Winchester') WHERE name IN ('Angemon', 'Boarmon');
 
+-- Insert data in the vets table
+
+-- Insert data in the specializations table
+
+-- Insert data in the visits table
+
 
 
 

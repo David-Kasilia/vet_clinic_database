@@ -46,16 +46,20 @@ CREATE TABLE vets (
 
 -- "join table" specializations Table to handle relationship
 CREATE TABLE specializations (
+    id INT GENERATED ALWAYS AS IDENTITY,
     species_id INT NOT NULL,
     vet_id INT NOT NULL,
+    PRIMARY KEY(id),
     FOREIGN KEY (species_id) REFERENCES species (id),
     FOREIGN KEY (vet_id) REFERENCES vets (id)
 );
 
 -- "join table" visits Table to handle relationship
 CREATE TABLE visits (
+    id INT GENERATED ALWAYS AS IDENTITY,
     animal_id INT NOT NULL,
     vet_id INT NOT NULL,
+    PRIMARY KEY(id)
     FOREIGN KEY (animal_id) REFERENCES animals (id),
     FOREIGN KEY (vet_id) REFERENCES vets (id)
 
