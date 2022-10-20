@@ -52,4 +52,11 @@ CREATE TABLE specializations (
     FOREIGN KEY (vet_id) REFERENCES vets (id)
 );
 
+-- "join table" visits Table to handle relationship
+CREATE TABLE visits (
+    animal_id INT NOT NULL,
+    vet_id INT NOT NULL,
+    FOREIGN KEY (animal_id) REFERENCES animals (id),
+    FOREIGN KEY (vet_id) REFERENCES vets (id)
 
+);
