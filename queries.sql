@@ -98,3 +98,10 @@ EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4; -- Excecution t
 EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2; -- Exceution Time 1367.615ms
 
 EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com'; -- Execution Time 879.584ms
+
+/* Actions to improve performance by creating indexex*/
+CREATE INDEX visits_animal_index ON visits(animal_id); -- Excecution Time: 535.796ms
+
+CREATE INDEX visits_vet_index ON visits(vet_id); -- Excecution Time: 767.760ms
+
+CREATE INDEX owners_email_index ON owners(email); -- Excecution Time: 0.147ms
